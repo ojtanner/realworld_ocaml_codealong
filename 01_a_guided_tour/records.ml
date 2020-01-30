@@ -39,3 +39,24 @@ let another_function_with_a_record_input {first_name; last_name } =
  * via the dot-notation as an alternative *)
 let my_first_name = my_record_exapmle.first_name
 let my_last_name = my_record_exapmle.last_name
+
+(*
+ Record fields can be marked as MUTABLE
+*)
+type running_sum = {
+  mutable sum : float;
+  mutable n : int;
+}
+
+let my_mutable_record = {
+  sum = 0.;
+  n = 0;
+}
+
+(*
+ Increment the running sum by a randomly
+ chosen number
+*)
+let () = (* the strange "()" simply means "nothing" *)
+  my_mutable_record.sum <- my_mutable_record.sum +. 45.2;
+  my_mutable_record.n <- my_mutable_record.n + 1;;
