@@ -146,3 +146,20 @@ wrapper my_function 10 20
  * let wrapper f divisor dividend = f ~divisor ~dividend;;
  * wrapper my_function 10 20
  *)
+
+(*
+ * Optional Arguments:
+ * Arguments that do not need to be provided.
+ * The argument is of type option.
+ *)
+
+let function_with_optional_argument ?optional_argument second_argument =
+  match optional_argument with
+  | None -> "No argument provided"
+  | Some x -> "An argument was provided"
+
+(* Shorthand to avoid matching the optional arg:
+ *)
+
+let function_with_optional_argument ?(optional_argument="Hello") second_argument =
+  optional_argument ^ second_argument
