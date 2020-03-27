@@ -8,11 +8,11 @@ let function_name parameter_1 parameter_n =
   let nested_function parameter =
     parameter
   in
-
+  nested_function (parameter_1 + parameter_n);;
   (* the last line of a function
    * is the return value
    *)
-  parameter_1 + parameter_n;;
+
   (* also note that we used the
    * "+" operator, which is limited
    * to Integers.
