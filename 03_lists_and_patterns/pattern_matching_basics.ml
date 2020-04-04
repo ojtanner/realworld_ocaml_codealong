@@ -20,13 +20,13 @@ let rec droplist list todrop =
   match list with
   | [] -> []
   | [hd] ->
-      if hd = todrop
-          then []
-          else [hd]
+    if hd = todrop
+    then []
+    else [hd]
   | hd :: tl ->
-      if hd = todrop
-        then droplist tl todrop
-        else hd :: droplist tl todrop;;
+    if hd = todrop
+    then droplist tl todrop
+    else hd :: droplist tl todrop;;
 
 droplist mylist 3
 
@@ -42,9 +42,9 @@ let rec dropzero list =
   match list with
   | [] -> []
   | 0 :: tl ->
-      dropzero tl
+    dropzero tl
   | hd :: tl ->
-      hd :: dropzero tl;;
+    hd :: dropzero tl;;
 
 (*
  * It is also possible to not name a pattern at all if you don't care for it
