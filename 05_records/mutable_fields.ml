@@ -7,10 +7,7 @@
 *
 *)
 
-type counter =
-{
-mutable count : int;
-}
+type counter = { mutable count : int }
 
 (*
 *
@@ -19,5 +16,4 @@ mutable count : int;
 *
 *)
 
-let update_counter counter =
-counter.count <- counter.count + 1;
+let update_counter counter = counter.count <- counter.count + 1

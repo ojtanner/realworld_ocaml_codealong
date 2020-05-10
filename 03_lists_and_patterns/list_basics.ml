@@ -3,7 +3,7 @@
  *)
 
 (* This is a list of integers *)
-let mylist = [1;2;3]
+let mylist = [ 1; 2; 3 ]
 
 (*
  * Lists can be constructed via the `:::` Operator
@@ -15,4 +15,4 @@ let mylist = [1;2;3]
  * to the head of the empty list.
  * From then on, the list will be of type `int` instead of polymorphic
  *)
-let mylist = 1::(2::(3::[]))
+let mylist = [ 1; 2; 3 ]

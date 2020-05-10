@@ -12,21 +12,10 @@
 *)
 
 type person =
-{
-name : string;
-age : int;
-}
+  { name : string
+  ; age : int
+  }
 
-let tyler_20 =
-{
-name = "Tyler";
-age = 20;
-}
-
-let tyler_40 =
-{
-  tyler_20 with age = 40
-}
-
-let functional_update_of_record person new_age =
-{ person with age = new_age }
+let tyler_20 = { name = "Tyler"; age = 20 }
+let tyler_40 = { tyler_20 with age = 40 }
+let functional_update_of_record person new_age = { person with age = new_age }

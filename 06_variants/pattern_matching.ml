@@ -10,14 +10,15 @@
 *)
 
 type rgb =
-| Red
-| Green
-| Blue
+  | Red
+  | Green
+  | Blue
 
 let print_color = function
-| Red -> print_string "red color"
-| Green -> print_string "green color"
-| Blue -> print_string "blue color"
+  | Red -> print_string "red color"
+  | Green -> print_string "green color"
+  | Blue -> print_string "blue color"
+;;
 
 (*
 *
@@ -27,6 +28,7 @@ let print_color = function
 *)
 
 let print_some_colors = function
-| Red -> print_string "red color"
-| Green -> print_string "green color"
-| _ -> print_string "catch all case"
+  | Red -> print_string "red color"
+  | Green -> print_string "green color"
+  | _ -> print_string "catch all case"
+;;

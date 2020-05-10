@@ -3,9 +3,10 @@
  * Functions without a name
  *)
 
-(fun parameter ->
+;;
+fun parameter ->
   (* function body*)
-  parameter)
+  parameter
 
 let eight = (fun number -> number + 1) 7
 
@@ -21,10 +22,9 @@ let binary_operation a_function x y =
    * and applies that function to x and y
    *)
   a_function x y
+;;
 
-let addition x y =
-  x + y
-
+let addition x y = x + y
 let four = binary_operation addition 2 2
 
 (*
@@ -32,10 +32,7 @@ let four = binary_operation addition 2 2
  * You can write functions the following
  * way:
  *)
-let my_addition =
-  (fun x ->
-    (fun y ->
-      x + y));;
+let my_addition x y = x + y
 
 (* Each argument of a function
  * is actually one anonymous function.
@@ -53,8 +50,7 @@ let my_addition =
 (* we define the addition function
  * which takes an x and a y
  *)
-let add x y =
-  x + y;;
+let add x y = x + y
 
 (* we only give "add" the first argument,
  * "x", and "load" the function with
@@ -67,9 +63,8 @@ let add x y =
  *
  * This concept is called currying.
  *)
-let add_2 = add 2;;
-
-let four = add_2 2;;
+let add_2 = add 2
+let four = add_2 2
 
 (*
  * Recursive functions:
@@ -80,8 +75,9 @@ let rec range a b f =
   match a - b with
   | 0 -> ()
   | _ ->
-      f a;
-      range (a + 1) b f;;
+    f a;
+    range (a + 1) b f
+;;
 
 (*
  * "function" keyword:
@@ -94,6 +90,8 @@ let rec range a b f =
 let f = function
   | [] -> None
   | hd :: tl -> Some hd
+;;
+
 (* Here we directly pattern match the
  * list provided as input argument
  * thanks to the "function" keyword.
@@ -109,19 +107,22 @@ let f = function
  * Also, labeled arguments can be passed
  * in any order.
  *)
-let my_function ~dividend ~divisor = dividend / divisor;;
+let my_function ~dividend ~divisor = dividend / divisor
 
 (* Invoking a function with labeled parameters: *)
+
+;;
 my_function ~dividend:10 ~divisor:2
 
 (* You can also use shorthands if there
  * already exist variables with the same
  * names as your labeled parameters.
  *)
-let dividend = 10;;
-let divisor = 2;;
+let dividend = 10
+let divisor = 2
 
-my_function ~dividend ~divisor;;
+;;
+my_function ~dividend ~divisor
 
 (* Gotchas with labeled arguments:
  * If you pass a function with
@@ -134,8 +135,9 @@ my_function ~dividend ~divisor;;
  * function signature.
  *)
 
-let wrapper f divisor dividend = f ~dividend ~divisor;;
+let wrapper f divisor dividend = f ~dividend ~divisor
 
+;;
 wrapper my_function 10 20
 
 (* The code above works.
@@ -157,9 +159,11 @@ let function_with_optional_argument ?optional_argument second_argument =
   match optional_argument with
   | None -> "No argument provided"
   | Some x -> "An argument was provided"
+;;
 
 (* Shorthand to avoid matching the optional arg:
  *)
 
-let function_with_optional_argument ?(optional_argument="Hello") second_argument =
+let function_with_optional_argument ?(optional_argument = "Hello") second_argument =
   optional_argument ^ second_argument
+;;

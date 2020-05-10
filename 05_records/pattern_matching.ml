@@ -13,13 +13,13 @@
 *)
 
 type person =
-{
-name : string;
-age : int;
-}
+  { name : string
+  ; age : int
+  }
 
 let person_printer { name; age } =
-print_string ("Name : " ^ name ^ ", age : " ^ string_of_int age)
+  print_string ("Name : " ^ name ^ ", age : " ^ string_of_int age)
+;;
 
 (*
 *
@@ -29,11 +29,7 @@ print_string ("Name : " ^ name ^ ", age : " ^ string_of_int age)
 
 let name = "John"
 let age = 20
-let john_person =
-{
-name;
-age;
-}
+let john_person = { name; age }
 
 (*
 *
@@ -44,8 +40,7 @@ age;
 *
 *)
 
-let create_person ~name ~age =
-{ name; age }
+let create_person ~name ~age = { name; age }
 
 (*
 *
@@ -56,13 +51,15 @@ let create_person ~name ~age =
 *)
 
 type needlessly_verbose_record =
-{
-this_name_is_too_long : string;
-another_extremly_long_field_name : int;
-}
+  { this_name_is_too_long : string
+  ; another_extremly_long_field_name : int
+  }
 
-let myfunction { this_name_is_too_long = first; another_extremly_long_field_name = second } =
-first ^ (string_of_int second)
+let myfunction
+    { this_name_is_too_long = first; another_extremly_long_field_name = second }
+  =
+  first ^ string_of_int second
+;;
 
 (*
 *

@@ -7,35 +7,32 @@
 *)
 
 module Car = struct
-type t = {
-wheels: int;
-horsepower: int;
-}
+  type t =
+    { wheels : int
+    ; horsepower : int
+    }
 end
 
 module Motorcycle = struct
-type t = {
-seats: int;
-sidecar: bool;
-}
+  type t =
+    { seats : int
+    ; sidecar : bool
+    }
 end
 
 module Plane = struct
-type t = {
-altitude: float;
-capacity: float;
-}
+  type t =
+    { altitude : float
+    ; capacity : float
+    }
 end
 
 type vehicle =
-| Car of Car.t
-| Motorcycle of Motorcycle.t
-| Plane of Plane.t
+  | Car of Car.t
+  | Motorcycle of Motorcycle.t
+  | Plane of Plane.t
 
-let some_car = Car {
-wheels = 4;
-horsepower = 200;
-}
+let some_car = Car { wheels = 4; horsepower = 200 }
 
 (*
 *
@@ -44,5 +41,5 @@ horsepower = 200;
 *)
 
 type message =
-| Greeting of { greet: string }
-| Goodbye of { goodbye: string }
+  | Greeting of { greet : string }
+  | Goodbye of { goodbye : string }

@@ -10,10 +10,10 @@
 *)
 
 type animal =
-| Cat
-| Dog
-| Cow
-| Fish
+  | Cat
+  | Dog
+  | Cow
+  | Fish
 
 let cat = Cat
 
@@ -39,10 +39,10 @@ let amount_payed = Dollar 4.20
 *)
 
 type example_variant =
-| None
-| One of int
-| Two of int * int
-| Tuple of (int * int)
+  | None
+  | One of int
+  | Two of int * int
+  | Tuple of (int * int)
 
 (*
 *
@@ -51,7 +51,7 @@ type example_variant =
 *)
 
 type simple_mathematical_expression =
-| Value of int
-| Addition of simple_mathematical_expression * simple_mathematical_expression
+  | Value of int
+  | Addition of simple_mathematical_expression * simple_mathematical_expression
 
 let addition = Addition (Value 10, Value 20)

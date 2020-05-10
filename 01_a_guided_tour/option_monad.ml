@@ -14,3 +14,4 @@ let division_option x y =
   (* If the function does not divide by zero,
    * return the Some (Result of division) *)
   | x, y -> Some (x / y)
+;;

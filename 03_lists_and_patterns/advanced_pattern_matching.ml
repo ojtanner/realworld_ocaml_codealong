@@ -4,8 +4,9 @@
 
 let list_matching list =
   match list with
-  | [] | [_] -> "group two cases into one output"
+  | [] | [ _ ] -> "group two cases into one output"
   | hd :: tl -> "same as ever"
+;;
 
 (*
  * Above we have grouped two cases into one single output
@@ -17,8 +18,9 @@ let list_matching list =
 
 let list_matching list =
   match list with
-  | [] | [_] as l -> l
+  | ([] | [ _ ]) as l -> l
   | hd :: tl as l -> l
+;;
 
 (*
  * Above we have repeated the example but we have assigned a name to
@@ -32,6 +34,7 @@ let integer_matching numer =
   match numer with
   | num when num = 0 -> "Found the zero"
   | num -> "All the other cases"
+;;
 
 (*
  * Here we see that we can specify when the particula case should be matched

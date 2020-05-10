@@ -2,7 +2,7 @@
  * Pattern-matching Lists can be done with the following expression
  *)
 
-let mylist = [1;2;3]
+let mylist = [ 1; 2; 3 ]
 
 (*
  * We have to match all cases of the list:
@@ -19,15 +19,11 @@ let mylist = [1;2;3]
 let rec droplist list todrop =
   match list with
   | [] -> []
-  | [hd] ->
-    if hd = todrop
-    then []
-    else [hd]
-  | hd :: tl ->
-    if hd = todrop
-    then droplist tl todrop
-    else hd :: droplist tl todrop;;
+  | [ hd ] -> if hd = todrop then [] else [ hd ]
+  | hd :: tl -> if hd = todrop then droplist tl todrop else hd :: droplist tl todrop
+;;
 
+;;
 droplist mylist 3
 
 (*
@@ -41,10 +37,9 @@ droplist mylist 3
 let rec dropzero list =
   match list with
   | [] -> []
-  | 0 :: tl ->
-    dropzero tl
-  | hd :: tl ->
-    hd :: dropzero tl;;
+  | 0 :: tl -> dropzero tl
+  | hd :: tl -> hd :: dropzero tl
+;;
 
 (*
  * It is also possible to not name a pattern at all if you don't care for it
@@ -53,3 +48,4 @@ let rec traverselist list =
   match list with
   | [] -> []
   | _ :: tl -> traverselist tl
+;;

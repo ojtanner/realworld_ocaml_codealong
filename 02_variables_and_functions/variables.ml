@@ -29,13 +29,14 @@ let a = "Penguin"
  * accessible in all of the file
  *)
 
-let toplevel_block = 1;;
+let toplevel_block = 1
 
+;;
 let smaller_block = 2 in
-  (* "smaller_block" is only accessible
-   * from within this block.
-   * Once we exit this block,
-   * the variable will no longer
-   * be accessible to us
-   *)
-  smaller_block + 1
+(* "smaller_block" is only accessible
+ * from within this block.
+ * Once we exit this block,
+ * the variable will no longer
+ * be accessible to us
+ *)
+smaller_block + 1

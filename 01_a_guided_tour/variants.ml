@@ -16,6 +16,7 @@ let greet_pet pet =
   match pet with
   | Dog -> "Hello dog!"
   | Cat -> "Hello cat!"
+;;
 
 type variant_with_values =
   | My_Integer of int
@@ -27,5 +28,6 @@ type variant_with_values =
  * if the variant expects one *)
 let my_integer = My_Integer 42
 let my_float = My_Float 9.8
+
 (* Be aware that both my_integer and
  * my_float are of type "variant_with_values" *)
