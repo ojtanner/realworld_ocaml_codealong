@@ -12,6 +12,11 @@ for i = 0 to 10 do
   print_int i
 done
 
+;;
+for i = 10 downto 0 do
+  print_int i
+done
+
 (*
  * while-loop:
  *)
