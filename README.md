@@ -1,4 +1,4 @@
-Code-along to the book Real World OCaml.
+Code-along to the book [Real World OCaml](https://dev.realworldocaml.org/toc.html).
 
 Commits to the repo will be sporadic.
 While i feel that OCaml is a very interesting language with
